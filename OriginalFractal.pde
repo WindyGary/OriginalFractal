@@ -1,4 +1,4 @@
-public int size = 200;
+public int sizeOfCircle = 200;
 public void setup()
 {
   size(500, 500);
@@ -9,7 +9,7 @@ public void setup()
 void draw() {
     background(0);
        
-   if (size > 0){
+   if (sizeOfCircle > 0){
      noFill();
    } else {
      textAlign(CENTER);
@@ -17,15 +17,15 @@ void draw() {
      fill((float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
      text("COWVIN GOES MOOOOOOO", 250, 20);
    }
-   myFractal(250, 250, size);
+   myFractal(250, 250, sizeOfCircle);
 }
 
 void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   if (e > 0){
-    size+= 10;
+    sizeOfCircle+= 10;
   } else {
-    size-= 10;
+    sizeOfCircle-= 10;
   }
 }
 
