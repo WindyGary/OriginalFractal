@@ -1,5 +1,3 @@
-public int x = 250;
-public int y = 250;
 public int size = 200;
 public void setup()
 {
@@ -19,7 +17,7 @@ void draw() {
      fill((float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
      text("COWVIN GOES MOOOOOOO", 250, 20);
    }
-   myFractal(x, y, size);
+   myFractal(250, 250, size);
 }
 
 void mouseWheel(MouseEvent event) {
