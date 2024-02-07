@@ -8,7 +8,6 @@ public void setup()
 }
 void draw() {
     background(0);
-       
    if (sizeOfCircle > 0){
      noFill();
    } else {
@@ -24,11 +23,17 @@ void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   if (e > 0){
     sizeOfCircle+= 10;
-  } else {
+  } else if (e <= 0){
     sizeOfCircle-= 10;
   }
 }
-
+void keyPressed(){
+     if (key == 'w'){
+     sizeOfCircle += 10;
+   } else if (key == 's'){
+     sizeOfCircle -= 10;
+   }
+}
 void mousePressed() {
 stroke((float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
 }
