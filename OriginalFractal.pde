@@ -11,8 +11,8 @@ void draw() {
        
    if (size > 0){
      noFill();
-     textAlign(CENTER);
    } else {
+     textAlign(CENTER);
      textSize(20);
      fill((float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
      text("COWVIN GOES MOOOOOOO", 250, 20);
