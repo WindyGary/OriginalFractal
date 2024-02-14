@@ -5,7 +5,6 @@ public void setup()
   background(0);
   stroke((float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
   rectMode(CENTER);
-noLoop();
 }
 void draw() {
     background(0);
@@ -24,20 +23,15 @@ void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   if (e > 0){
     sizeOfCircle+= 10;
-    redraw();
   } else if (e <= 0){
     sizeOfCircle-= 10;
-    redraw();
   }
-  redraw();
 }
 void keyPressed(){
      if (key == 'w'){
      sizeOfCircle += 10;
-     redraw();
    } else if (key == 's'){
      sizeOfCircle -= 10;
-     redraw();
    }
 }
 void mousePressed() {
