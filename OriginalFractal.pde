@@ -37,8 +37,10 @@ void keyPressed(){
 void mousePressed() {
 stroke((float)(Math.random()*255), (float)(Math.random()*255), (float)(Math.random()*255));
 }
-public void myFractal(int x, int y, int siz) {
-  ellipse(x, y, siz, siz);
+public void myFractal(double x, double y, double siz) {
+  if (!(x < 0 || y > 500 || x > 500 || y < 0)){
+  ellipse((float)x, (float)y, (float)siz, (float)siz);
+  }
   if (siz > 5) {
     myFractal(x+siz/2, y-siz/2, siz/2);
     myFractal(x-siz/2, y+siz/2, siz/2);
